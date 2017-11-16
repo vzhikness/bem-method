@@ -87,9 +87,9 @@ npm start -- -p 8081
 
 ## Кратко о структуре проекта
 
-HTML-разметка web-страницы и применяемые к ней CSS-правила генерируются из её описания в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле `page-name.bemjson.js`. В терминах БЭМ-методологии будем называть BEMJSON-описание страницы [декларацией](https://ru.bem.info/methodology/declarations/).
+HTML-разметка web-страницы генерируется из её описания в [BEMJSON](https://ru.bem.info/platform/bemjson/)-файле `page-name.bemjson.js`. В терминах БЭМ-методологии будем называть BEMJSON-описание страницы [декларацией](https://ru.bem.info/methodology/declarations/).
 
-BEMJSON-декларация — это структура страницы, описанная в терминах блоков, элементов и модификаторов. Для создания HTML-представления web-страницы в работу включается [шаблонизатор BEMHTML](https://ru.bem.info/platform/bem-xjst/), который преобразует входные данные из BEMJSON-файла в HTML. На основе BEMJSON-файла, который описывает страницу в виде [БЭМ-дерева](https://ru.bem.info/methodology/key-concepts/#БЭМ-дерево), [собираются зависимости](https://ru.bem.info/methodology/build/), на основании которых собираются бандлы технологий.
+BEMJSON-декларация — это структура страницы, описанная в терминах блоков, элементов и модификаторов. Для создания HTML-представления web-страницы в работу включается [шаблонизатор BEMHTML](https://ru.bem.info/platform/bem-xjst/), который преобразует входные данные из BEMJSON-файла в HTML. На основе BEMJSON-файла, который описывает страницу в виде [БЭМ-дерева](https://ru.bem.info/methodology/key-concepts/#БЭМ-дерево), [собираются зависимости](https://ru.bem.info/methodology/build/), по которым строятся [бандлы](https://ru.bem.info/methodology/build/) технологий.
 
 Блоки — строительный материал для страниц. Их можно заимствовать из [библиотек](https://ru.bem.info/libs/) или создавать самостоятельно.
 
@@ -260,7 +260,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/tadatuta/4b4175f7eaa0a8113365) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/a5c5e962c07c19865cda) index.bemjson.js.
 
 ![Блок logo](start-with-project-stub__logo.png)
 
@@ -286,7 +286,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/7da95e41ed257bf1e5a4f63247c25925) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/d9886223909f269ab8ebd1c8ce473aba) index.bemjson.js.
 
 Добавим обработку пользовательского запроса Яндексом:
 
@@ -312,7 +312,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/3d862f3e6ff2eb5221498cdfe7bc9351) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/0d9232d7f5c3d208f4854943fbf242ef) index.bemjson.js.
 
 ![Форма поиска](start-with-project-stub__search.png)
 
@@ -344,7 +344,7 @@ bem create desktop.blocks/layout.css
 }
 ```
 
-[Пример кода](https://gist.github.com/godfreyd/ed8a8e811a9f3d83950aff6116990fd6) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/b52a83c7860355f6d5ec9877517439af) index.bemjson.js.
 
 ### Модификация блоков библиотек
 
@@ -463,7 +463,7 @@ bem create -l desktop.blocks -b head -T css
         //...
 }
 ```
-[Пример кода](https://gist.github.com/godfreyd/357ea81bdd3cbeb86d1c64ca05cfc1a7) index.bemjson.js.
+[Пример кода](https://gist.github.com/innabelaya/b20986600db84c1b8ed229d4a7e012ff) index.bemjson.js.
 
 Чтобы эти данные превратились в нужную разметку, блок должен быть реализован в технологии BEMHTML. Для корректировки внешнего вида применим CSS-правила. Воспользуемся командой `bem create`, чтобы создать блок сразу в двух технологиях:
 
